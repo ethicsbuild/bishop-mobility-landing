@@ -3,21 +3,13 @@ export default function Solution() {
     <section className="bg-gradient-to-br from-blue-50 to-white">
       <div className="section-container">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Column - Image Placeholder */}
+          {/* Left Column - Product Dimensions */}
           <div className="order-2 lg:order-1">
-            <div className="aspect-[4/3] bg-gradient-to-br from-blue-100 to-white rounded-2xl shadow-xl flex items-center justify-center">
-              <div className="text-center p-8">
-                <svg className="w-32 h-32 mx-auto text-blue-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                <p className="text-gray-600 text-lg font-medium">
-                  Replace with product detail photo
-                </p>
-                <p className="text-gray-500 text-sm mt-2">
-                  Show the dual S-curve design and belt clip
-                </p>
-              </div>
-            </div>
+            <img 
+              src="/product-dimensions.jpg" 
+              alt="Bishop Mobility Cane Holster technical specifications - showing dual S-curved columns with precise measurements"
+              className="aspect-[4/3] object-contain bg-white rounded-2xl shadow-xl p-8"
+            />
           </div>
           
           {/* Right Column - Content */}

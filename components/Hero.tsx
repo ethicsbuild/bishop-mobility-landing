@@ -53,21 +53,13 @@ export default function Hero() {
             </div>
           </div>
           
-          {/* Right Column - Image Placeholder */}
+          {/* Right Column - Product Image */}
           <div className="relative">
-            <div className="aspect-square bg-gradient-to-br from-blue-100 to-blue-50 rounded-2xl shadow-2xl flex items-center justify-center">
-              <div className="text-center p-8">
-                <svg className="w-32 h-32 mx-auto text-blue-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-                <p className="text-gray-600 text-lg font-medium">
-                  Replace with your product photo
-                </p>
-                <p className="text-gray-500 text-sm mt-2">
-                  Recommended: High-quality image of the cane holster
-                </p>
-              </div>
-            </div>
+            <img 
+              src="/product-in-use.jpg" 
+              alt="Bishop Mobility Cane Holster in use - showing the dual S-curved design holding a cane securely on a belt"
+              className="aspect-square object-cover rounded-2xl shadow-2xl"
+            />
             
             {/* Decorative elements */}
             <div className="absolute -top-4 -right-4 w-24 h-24 bg-blue-200 rounded-full opacity-50 blur-2xl"></div>
