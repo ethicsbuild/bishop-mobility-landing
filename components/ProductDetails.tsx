@@ -47,7 +47,7 @@ export default function ProductDetails() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <h3 className="text-gray-900">TH-72 Polymer Resin</h3>
+              <h3 className="text-gray-900">High-Quality Polymer Resin</h3>
               <p className="text-gray-600">
                 UV-resistant, lightweight, and incredibly strong. This isn't cheap plastic—it's 
                 engineered material designed for daily use and long-term durability.
