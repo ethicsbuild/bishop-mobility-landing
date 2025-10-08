@@ -1,6 +1,6 @@
 export default function ProductDetails() {
   return (
-    <section className="bg-gradient-to-br from-gray-50 to-white">
+    <section id="product" className="bg-gradient-to-br from-gray-50 to-white">
       <div className="section-container">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
