@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { supabase } from '@/lib/supabase'
 
 export default function LeadForm() {
   const [formData, setFormData] = useState({
@@ -17,11 +18,24 @@ export default function LeadForm() {
     setStatus('submitting')
     
     try {
-      // TODO: Replace with your actual form submission endpoint
-      // For now, this is a placeholder that simulates submission
-      await new Promise(resolve => setTimeout(resolve, 1000))
+      // Submit to Supabase
+      const { data, error } = await supabase
+        .from('lead_submissions')
+        .insert([
+          {
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            mobility_needs: formData.mobilityNeeds
+          }
+        ])
       
-      console.log('Form submitted:', formData)
+      if (error) {
+        console.error('Supabase error:', error)
+        throw error
+      }
+      
+      console.log('Form submitted successfully:', data)
       
       setStatus('success')
       setMessage('Thank you! We\'ll be in touch soon with updates about the Bishop Mobility Cane Holster.')
@@ -33,8 +47,9 @@ export default function LeadForm() {
         setMessage('')
       }, 5000)
     } catch (error) {
+      console.error('Submission error:', error)
       setStatus('error')
-      setMessage('Something went wrong. Please try again or email us directly.')
+      setMessage('Something went wrong. Please try again or email us directly at info@bishopmobility.com')
     }
   }
 
